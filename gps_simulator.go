@@ -14,9 +14,9 @@ func main() {
 	for i := 0; i < 1000; i++ {
 		data := models.GPS{
 			Prototype_id: fmt.Sprintf("GPS_%03d", rand.Intn(10)),
-			Lat:          fmt.Sprintf("%.6f", 19.4326+rand.Float64()/1000), // CDMX aprox
+			Lat:          fmt.Sprintf("%.6f", 19.4326+rand.Float64()/1000), 
 			Lon:          fmt.Sprintf("%.6f", -99.1332+rand.Float64()/1000),
-			Spd:          fmt.Sprintf("%.2f", 10+rand.Float64()*50), // km/h
+			Spd:          fmt.Sprintf("%.2f", 10+rand.Float64()*50), 
 			Date:         time.Now().Format("2006-01-02"),
 			UTC:          time.Now().Format("15:04:05"),
 			Alt:          fmt.Sprintf("%.1f", 2200+rand.Float64()*50),

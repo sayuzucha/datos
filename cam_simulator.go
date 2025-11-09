@@ -25,7 +25,7 @@ func main() {
 		panic(err)
 	}
 
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 1000; i++ {
 		detection := detections[rand.Intn(len(detections))]
 		file := files[rand.Intn(len(files))]
 

@@ -18,22 +18,21 @@ type Material struct {
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	// Tipos de materiales que pueden llegar al contenedor
+	
 	materiales := []Material{
-		{"plastico", 20, 60}, // g
-		{"lata", 12, 25},     // g
+		{"plastico", 20, 60}, 
+		{"lata", 12, 25},     
 	}
 
 	currentWeight := 0.0
-	maxWeight := 1000.0 // 1 kg máximo antes de vaciar
+	maxWeight := 1000.0 
 	filling := true
 
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 1000; i++ {
 		if filling {
-			// Simula detección de material aleatorio
+			
 			mat := materiales[rand.Intn(len(materiales))]
 
-			// Peso de ese material
 			add := mat.PesoMin + rand.Float64()*(mat.PesoMax-mat.PesoMin)
 			currentWeight += add
 
@@ -44,7 +43,7 @@ func main() {
 				fmt.Println("🧺 Contenedor lleno, vaciando...")
 			}
 		} else {
-			// Simula vaciado total del contenedor
+			
 			currentWeight -= 150 + rand.Float64()*100
 			if currentWeight <= 0 {
 				currentWeight = 0
